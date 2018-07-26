@@ -1,11 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lBa-tW-Opc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Create Place-->
+        <scene sceneID="bd6-pe-ouG">
+            <objects>
+                <viewController id="ewo-Wb-ygn" customClass="CreateNewPlaceViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YzB-Df-IdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="I6j-SS-IGR"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Create Place" image="Plus" id="68g-IZ-eK7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2F-KQ-X3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="460"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="d2T-Wu-x5F">
+            <objects>
+                <viewController id="7EP-7y-Mq9" customClass="VisitorPlacesViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ipH-mR-PMY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTk-YH-kCN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="297"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="297" id="ISk-JL-1yN"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="8Bf-xw-WVm" kind="embed" identifier="EmbedMapView" id="qJy-8X-Zaz"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-N3-Pwo">
+                                <rect key="frame" x="0.0" y="305" width="375" height="313"/>
+                                <connections>
+                                    <segue destination="dgL-Dw-Hc2" kind="embed" id="oop-hA-WgA"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CTk-YH-kCN" firstAttribute="trailing" secondItem="Btv-M5-HT4" secondAttribute="trailing" id="1Q5-H3-O1Y"/>
+                            <constraint firstItem="bnW-N3-Pwo" firstAttribute="top" secondItem="CTk-YH-kCN" secondAttribute="bottom" constant="8" id="3Da-zs-aoj"/>
+                            <constraint firstItem="bnW-N3-Pwo" firstAttribute="leading" secondItem="Btv-M5-HT4" secondAttribute="leading" id="Yvf-Bd-GqL"/>
+                            <constraint firstItem="CTk-YH-kCN" firstAttribute="leading" secondItem="Btv-M5-HT4" secondAttribute="leading" id="sbC-MM-was"/>
+                            <constraint firstItem="CTk-YH-kCN" firstAttribute="top" secondItem="ipH-mR-PMY" secondAttribute="top" id="vHs-v0-eF0"/>
+                            <constraint firstItem="bnW-N3-Pwo" firstAttribute="bottom" secondItem="Btv-M5-HT4" secondAttribute="bottom" id="wTe-gb-DLj"/>
+                            <constraint firstItem="bnW-N3-Pwo" firstAttribute="trailing" secondItem="Btv-M5-HT4" secondAttribute="trailing" id="yLe-du-eR9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Btv-M5-HT4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="Globe" id="g79-zG-tdB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TUp-rx-L3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="-205.54722638680661"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Thx-5C-xP2">
+            <objects>
+                <tabBarController id="lBa-tW-Opc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5xF-up-i0q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7EP-7y-Mq9" kind="relationship" relationship="viewControllers" id="oyD-CZ-ZbH"/>
+                        <segue destination="ewo-Wb-ygn" kind="relationship" relationship="viewControllers" id="zLL-5t-Wgg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HvC-4e-Urh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="128"/>
+        </scene>
+        <!--MapView-->
+        <scene sceneID="Dnt-m8-9db">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MapView" id="8Bf-xw-WVm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkD-s4-u3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037" y="-341"/>
+        </scene>
+        <!--PLacesTable-->
+        <scene sceneID="lSE-fh-nEb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PLacesTable" id="dgL-Dw-Hc2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nSs-7X-XQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="-97"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Globe" width="23" height="23"/>
+        <image name="Plus" width="21" height="21"/>
+    </resources>
 </document>

@@ -13,6 +13,12 @@
 		9DC8C296210A1DAF00A4B391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC8C294210A1DAF00A4B391 /* LaunchScreen.storyboard */; };
 		9DC8C2AD210A1F9F00A4B391 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC8C2AC210A1F9F00A4B391 /* MapViewController.swift */; };
 		9DC8C2B1210A206600A4B391 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DC8C2B0210A206600A4B391 /* MapView.storyboard */; };
+		A6AD84EB210A2A7500B30161 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD84EA210A2A7500B30161 /* Place.swift */; };
+		A6AD84ED210A2B2400B30161 /* PlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD84EC210A2B2400B30161 /* PlaceController.swift */; };
+		A6AD84F1210A2E7200B30161 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD84F0210A2E7200B30161 /* PlacesTableViewController.swift */; };
+		A6AD84F3210A2E9500B30161 /* CreateNewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD84F2210A2E9500B30161 /* CreateNewPlaceViewController.swift */; };
+		A6AD84F5210A2F1200B30161 /* VisitedPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AD84F4210A2F1200B30161 /* VisitedPlacesViewController.swift */; };
+		A6AD84F7210A32D800B30161 /* PLacesTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6AD84F6210A32D800B30161 /* PLacesTable.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		9DC8C297210A1DAF00A4B391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DC8C2AC210A1F9F00A4B391 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9DC8C2B0210A206600A4B391 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		A6AD84EA210A2A7500B30161 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		A6AD84EC210A2B2400B30161 /* PlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceController.swift; sourceTree = "<group>"; };
+		A6AD84F0210A2E7200B30161 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		A6AD84F2210A2E9500B30161 /* CreateNewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPlaceViewController.swift; sourceTree = "<group>"; };
+		A6AD84F4210A2F1200B30161 /* VisitedPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitedPlacesViewController.swift; sourceTree = "<group>"; };
+		A6AD84F6210A32D800B30161 /* PLacesTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PLacesTable.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +68,12 @@
 		9DC8C28A210A1DAE00A4B391 /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				A6AD84F4210A2F1200B30161 /* VisitedPlacesViewController.swift */,
+				A6AD84EA210A2A7500B30161 /* Place.swift */,
+				A6AD84EC210A2B2400B30161 /* PlaceController.swift */,
+				A6AD84F0210A2E7200B30161 /* PlacesTableViewController.swift */,
+				A6AD84F2210A2E9500B30161 /* CreateNewPlaceViewController.swift */,
 				9DC8C28B210A1DAE00A4B391 /* AppDelegate.swift */,
-				9DC8C2B4210A21A300A4B391 /* Protocols */,
-				9DC8C29F210A1E9F00A4B391 /* Model */,
-				9DC8C2A4210A1EE300A4B391 /* Model Controllers */,
 				9DC8C2A7210A1F5000A4B391 /* View Controllers */,
 				9DC8C29D210A1DB500A4B391 /* Resources */,
 			);
@@ -80,24 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				9DC8C28F210A1DAE00A4B391 /* Main.storyboard */,
+				A6AD84F6210A32D800B30161 /* PLacesTable.storyboard */,
 				9DC8C2B0210A206600A4B391 /* MapView.storyboard */,
 				9DC8C294210A1DAF00A4B391 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		9DC8C29F210A1E9F00A4B391 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		9DC8C2A4210A1EE300A4B391 /* Model Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 		9DC8C2A7210A1F5000A4B391 /* View Controllers */ = {
@@ -106,13 +107,6 @@
 				9DC8C2AC210A1F9F00A4B391 /* MapViewController.swift */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		9DC8C2B4210A21A300A4B391 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DC8C296210A1DAF00A4B391 /* LaunchScreen.storyboard in Resources */,
+				A6AD84F7210A32D800B30161 /* PLacesTable.storyboard in Resources */,
 				9DC8C293210A1DAF00A4B391 /* Assets.xcassets in Resources */,
 				9DC8C2B1210A206600A4B391 /* MapView.storyboard in Resources */,
 				9DC8C291210A1DAE00A4B391 /* Main.storyboard in Resources */,
@@ -187,8 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6AD84EB210A2A7500B30161 /* Place.swift in Sources */,
+				A6AD84F5210A2F1200B30161 /* VisitedPlacesViewController.swift in Sources */,
+				A6AD84ED210A2B2400B30161 /* PlaceController.swift in Sources */,
 				9DC8C28C210A1DAE00A4B391 /* AppDelegate.swift in Sources */,
 				9DC8C2AD210A1F9F00A4B391 /* MapViewController.swift in Sources */,
+				A6AD84F3210A2E9500B30161 /* CreateNewPlaceViewController.swift in Sources */,
+				A6AD84F1210A2E7200B30161 /* PlacesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
