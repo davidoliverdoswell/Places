@@ -8,28 +8,32 @@
 
 import UIKit
 
-class VisitedPlacesViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+class VisitedPlacesViewController: UIViewController, PlacesTableViewControllerDelegate {
     
+    var placeController: PlaceController?
+    
+    // MARK: - Properties
+    var mapViewController : MapViewController!
+    var placesTableViewController: PlacesTableViewController!
+    
+    func placeWasSelected(place: Place) {
+        mapViewController.location = place.location
+    }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let tableVC = segue.destination as? PlacesTableViewController {
+            placesTableViewController = tableVC
+            placesTableViewController.placeController = placeController
+            placesTableViewController.delegate = self
+        }
+
+        if let tableVC = segue.destination as? MapViewController {
+            mapViewController = tableVC
+        }
+        
     }
-    */
+    
 
 }

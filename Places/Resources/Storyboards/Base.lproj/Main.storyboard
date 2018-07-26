@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,19 +18,72 @@
                     <view key="view" contentMode="scaleToFill" id="YzB-Df-IdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VGZ-bK-Rba">
+                                <rect key="frame" x="0.0" y="199" width="375" height="200"/>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iH8-dh-hUX">
+                                <rect key="frame" x="16" y="199" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="latitude (-90 90)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kgr-mF-yV3">
+                                <rect key="frame" x="16" y="265" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="longitude (-180 180)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SZJ-RW-cSA">
+                                <rect key="frame" x="16" y="319" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnN-pk-18u">
+                                <rect key="frame" x="16" y="374" width="343" height="30"/>
+                                <state key="normal" title="save place"/>
+                                <connections>
+                                    <action selector="savePlace:" destination="ewo-Wb-ygn" eventType="touchUpInside" id="OGN-ZR-jFA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SZJ-RW-cSA" firstAttribute="trailing" secondItem="vnN-pk-18u" secondAttribute="trailing" id="Azy-2c-OKO"/>
+                            <constraint firstItem="kgr-mF-yV3" firstAttribute="trailing" secondItem="SZJ-RW-cSA" secondAttribute="trailing" id="BOq-op-yJU"/>
+                            <constraint firstItem="kgr-mF-yV3" firstAttribute="leading" secondItem="SZJ-RW-cSA" secondAttribute="leading" id="DPf-WW-AZK"/>
+                            <constraint firstItem="iH8-dh-hUX" firstAttribute="leading" secondItem="kgr-mF-yV3" secondAttribute="leading" id="Iqk-2E-Hwa"/>
+                            <constraint firstAttribute="trailing" secondItem="VGZ-bK-Rba" secondAttribute="trailing" id="NWQ-gh-dIj"/>
+                            <constraint firstItem="VGZ-bK-Rba" firstAttribute="centerX" secondItem="kgr-mF-yV3" secondAttribute="centerX" id="Nim-rL-1qv"/>
+                            <constraint firstItem="VGZ-bK-Rba" firstAttribute="top" secondItem="I6j-SS-IGR" secondAttribute="top" constant="179" id="TvW-6N-2W6"/>
+                            <constraint firstItem="I6j-SS-IGR" firstAttribute="bottom" secondItem="VGZ-bK-Rba" secondAttribute="bottom" constant="219" id="Wul-CV-xBZ"/>
+                            <constraint firstItem="vnN-pk-18u" firstAttribute="top" secondItem="SZJ-RW-cSA" secondAttribute="bottom" constant="25" id="Z5N-ew-D9E"/>
+                            <constraint firstItem="iH8-dh-hUX" firstAttribute="leading" secondItem="YzB-Df-IdC" secondAttribute="leadingMargin" id="cJf-ly-t9S"/>
+                            <constraint firstItem="SZJ-RW-cSA" firstAttribute="leading" secondItem="vnN-pk-18u" secondAttribute="leading" id="rvf-el-AdQ"/>
+                            <constraint firstItem="VGZ-bK-Rba" firstAttribute="leading" secondItem="YzB-Df-IdC" secondAttribute="leading" id="stL-Lc-9KI"/>
+                            <constraint firstItem="iH8-dh-hUX" firstAttribute="trailing" secondItem="kgr-mF-yV3" secondAttribute="trailing" id="v9t-ja-BTk"/>
+                            <constraint firstItem="SZJ-RW-cSA" firstAttribute="centerY" secondItem="YzB-Df-IdC" secondAttribute="centerY" id="xAb-q3-fsr"/>
+                            <constraint firstItem="SZJ-RW-cSA" firstAttribute="top" secondItem="kgr-mF-yV3" secondAttribute="bottom" constant="24" id="xmP-fD-wRi"/>
+                            <constraint firstItem="VGZ-bK-Rba" firstAttribute="top" secondItem="iH8-dh-hUX" secondAttribute="top" id="y0U-bm-Kk9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="I6j-SS-IGR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create Place" image="Plus" id="68g-IZ-eK7"/>
+                    <connections>
+                        <outlet property="latitude" destination="kgr-mF-yV3" id="kuv-Eg-SLa"/>
+                        <outlet property="longitude" destination="SZJ-RW-cSA" id="HIM-BU-mIy"/>
+                        <outlet property="name" destination="iH8-dh-hUX" id="NZa-4w-uhm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2F-KQ-X3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="505" y="460"/>
+            <point key="canvasLocation" x="476" y="459"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="d2T-Wu-x5F">
             <objects>
-                <viewController id="7EP-7y-Mq9" customClass="VisitorPlacesViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7EP-7y-Mq9" customClass="VisitedPlacesViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ipH-mR-PMY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="-205.54722638680661"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Places Tab Bar Controller-->
         <scene sceneID="Thx-5C-xP2">
             <objects>
-                <tabBarController id="lBa-tW-Opc" sceneMemberID="viewController">
+                <tabBarController id="lBa-tW-Opc" customClass="PlacesTabBarController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5xF-up-i0q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
